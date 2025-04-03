@@ -10,56 +10,58 @@
     <div id="app">
         <div id="header-container">
             <img src="" id="dodo-image" alt="Dodo Character">
-        </div>
-
-        <img src="../matcha.svg" alt="Matcha Image" class="matcha-image">
-
+        </div>       
+        
         <section id="categories">
-            <div class="button-container">
+            <img src="../matcha.svg" alt="Matcha Image" class="matcha-image" id="matcha-image">
+            <div class="button-container vertical">
                 <div class="menu-btn" onclick="showTasks()">Task <br> Scheduler</div>
                 <div class="menu-btn" onclick="showDesignProcess()">Design <br> Process</div>
             </div>
         </section>
+
+        <br><br><br><br>
         
         <section id="tasks-container" class="hidden">
             <div class="task-grid">
                 <a href="study.html" class="study-btn">
-                    Study <img src="../dodo-character/crying.png" alt="Study">
+                    Study <img src="../assets/Maryam-Casual.gif" id="maryamPng" alt="Study">
                 </a>
                 <a href="break.html" class="break-btn">
-                    Break <img src="../dodo-character/cool.png" alt="Break">
+                    Break <img src="../assets/Chaim-Casual.gif" id="chaimGif" alt="Break">
                 </a>
                 <a href="medication.html" class="meds-btn">
                     Take <br> Medication <br><br>
                     <img src="../meds.svg" alt="Medication">
                 </a>
                 <a href="gym.html" class="gym-btn">
-                    Gym <img src="../dodo-character/smile.png" alt="Gym">
+                    Gym <img src="../dodo-character/smile.png" id="smilePng" alt="Gym">
                 </a>
             </div>
         </section>
-        
+
+        <br><br><br><br><br><br>
         <!-- Design Process Section -->
         <section id="design-process" class="hidden">
             <div class="design-process">
-                <div class="task-btn">
+                <a href="searching-inspirations.html" class="task-btn">
                     <span>Searching <br> For <br> Inspirations</span>
                     <img src="../matcha-scoop.svg" alt="Tree Inspiration">
-                </div>
-                <div class="task-btn">
+                </a>
+                <a href="research.html" class="task-btn">
                     <span>Research</span>
-                    <img src="../research.svg" alt="Research Diagram">
-                </div>
-                <div class="task-btn">
+                    <img src="../research.svg" id="reasearchSvg" alt="Research Diagram">
+                </a>
+                <a href="wireframing.html" class="task-btn">
                     <span><u>Wireframing</u> <br>& Prototyping</span>
-                    <img src="../prototyping.svg" alt="Wireframing">
-                </div>
-                <div class="task-btn">
+                    <img src="../prototyping.svg" alt="Wireframing (Image not visible)">
+                </a>
+                <a href="design-finalizing.html" class="task-btn">
                     <span>Design Finalizing</span>
-                    <img src="../dodo-character/smile.png" alt="Final Design">
-                </div>
+                    <img src="../assets/Maryam-Sing.gif" id="maryamGif" alt="Final Design">
+                </a>
             </div>
-            <p>Step-by-step Design Process <br> Just stay consistent!</p>
+            <p>You Can Do It <br> Just stay consistent!</p>
         </section>
     </div>
     <script>

@@ -15,15 +15,41 @@ a{
     text-decoration: none;
     color: inherit;
 }
+/*This is Casual Gif*/
+#maryamGif{
+    width: 120px;
+    height: auto;
+}
+
+#chaimGif{
+    width: 155px;
+    height: auto;
+    padding-left: 12vw;
+}
+
+#maryamPng{
+    width: 175px;
+    height: auto;
+    padding-left: 11vw;
+}
+#researchSvg{
+    width: 150px;
+    height: auto; 
+}
+#smilePng{
+    width: 250px;
+    height: auto;
+    padding-left: 40px;
+}
 
 .icon {
-    opacity: 0;
+    opacity: 100;
 }
 
 #app {
     width: 100vw;
     height: 100vh;
-    background: #609E11;
+    background: #6aa329;
     border-radius: 20px;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     padding: 15px;
@@ -57,18 +83,18 @@ a{
 .menu-btn {
     background: #d3e4c5; 
     border-radius: 35px;
-    padding: 25px; 
+    padding: 20px; 
     text-align: center;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(213, 205, 205, 0.2);
     transition: all 0.3s ease;
     font-family: 'Jersey 25', sans-serif;
     color: #333; 
-    font-size: 2em; 
+    font-size: 1.5em; 
     margin: 15px; 
-    width: 75%; 
-    height: 250px;
-    margin-bottom: 250px;
+    width: 75%;
+    height: 150px; 
+    margin-bottom: 20px;
 
     /* Center text vertically and horizontally */
     display: flex;
@@ -87,15 +113,24 @@ a{
     grid-template-columns: 1fr 1fr;
     gap: 20px; 
     align-items: center;
-    width: 100%;
-    padding: 0 10px; 
+    width: 100%; 
+}
+
+.button-container.vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+    align-items: center;
+    margin-top: 10px; 
 }
 
 .matcha-image {
     width: 100%;
+    height: auto; 
+    max-height: 300px;
     border-radius: 15px;
     margin-bottom: 10px;
-    /* display: none; */
+    object-fit: contain; 
 }
 
 .task-grid {
@@ -109,7 +144,7 @@ a{
     flex-direction: column;
     justify-content: space-between;
     width: 45vw;
-    height: 50;
+    height: 35vh;
     font-size: 35px; 
     padding: 15px;
     border-radius: 55px;
@@ -385,8 +420,11 @@ body.night #app {
 }
 
 body.night .menu-btn, body.night .task-btn {
-    background: #72b51a;
-    color: #fff;
+    background: #7fa153;
+}
+
+body.night #design-process {
+    background-color: #4c7c29; /* Match background color for night mode */
 }
 
 .design-process .task-btn img {
