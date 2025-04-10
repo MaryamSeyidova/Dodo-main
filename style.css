@@ -175,6 +175,14 @@ a{
     background: #FF7043;
 }
 
+.meds-btn img {
+    transform: rotate(35deg);
+    width: 250px; 
+    height: auto; 
+    padding-bottom: 105px;
+    padding-left: 15px;
+}
+
 .task-btn {
     padding: 15px;
     background: #fff;
@@ -401,6 +409,9 @@ a{
 
 /* Night Mode */
 
+body.night .menu-btn {
+    color: #fff; /* Change text color to white in night mode */
+}
 
 .design-process .task-btn:nth-child(1) {
      color: #333;
@@ -420,7 +431,7 @@ body.night #app {
 }
 
 body.night .menu-btn, body.night .task-btn {
-    background: #7fa153;
+    background: #86ab56;
 }
 
 body.night #design-process {

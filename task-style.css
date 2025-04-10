@@ -27,22 +27,43 @@
 }
 
 .character img {
-    width: 25vw; /* Further increase size using viewport width */
-    max-width: 300px; /* Increase maximum size */
+    width: 25vw;
+    max-width: 300px; 
     cursor: pointer;
     transition: transform 0.2s;
 }
 
 .characters-container {
     display: flex;
-    flex-direction: row; /* Ensure horizontal alignment */
+    flex-direction: row; 
     justify-content: center;
-    gap: 20px; /* Add spacing between characters */
+    gap: 20px; 
     align-items: center;
     padding-top: 75px;
 }
 
+#gym, #meds{
+    text-align: center;
+}
+#medsGif{
+    width: 400px; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+#motivationalGif {
+    width: 440px; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
 /*This is Casual Gif*/
+ #studyGif{
+    width: 400px;
+    height: auto;
+    padding-left: 160px;
+}
 .characters-container #maryamGif{
     width: 175px;
     height: auto;

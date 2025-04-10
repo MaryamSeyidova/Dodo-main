@@ -157,3 +157,10 @@ h3 {
 .matcha-break, .matcha-break span, p, .task-btn span {
     font-family: Arial, sans-serif; /* Default font */
 }
+
+#research {
+    width: 360px; /* Adjust the width to make it smaller */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure proper alignment */
+    margin: 0 auto; /* Center the GIF horizontally */
+}
