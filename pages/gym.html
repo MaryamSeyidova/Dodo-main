@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../task-style.css">
 </head>
 <body>
-    <div id="app">
+    <div id="app" style="background: #FF7043;">
         <div id="header-container"></div>
         <h1 id="gym">Gym</h1>
         <div class="matcha-break">
@@ -32,7 +32,7 @@
         document.getElementById('header-container').innerHTML = fetch('header.html')
             .then(response => response.text())
             .then(data => {
-                document.getElementById('header-container').innerHTML = data;
+                document.getElementById('header-container').innerHTML = data.replace('dashboard.html', 'index.html');
             });
         
         // GIF URLs
