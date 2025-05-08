@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
             saveBtn.innerText = "Save";
             saveBtn.classList.remove("saved-state");
-        }, 2000);
+        }, 1000);
     });
 });
 

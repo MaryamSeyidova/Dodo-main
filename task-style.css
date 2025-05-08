@@ -282,19 +282,25 @@ a.href1 {
 }
 
 .note-panel {
-    width: 90%;
-    max-width: 350px;
-    height: 200px;
-    background-color: #3a5a20;
-    color: white;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: left;
-    overflow-y: auto;
+    font-size: 1.2rem; /* Large font size for readability */
+    font-family: monospace; /* Monospace font for consistent spacing */
+    line-height: 1.6; /* Add spacing between lines */
+    color: white; /* Ensure text is visible */
+    background-color: #4c7c29; /* Background color */
+    padding: 23px; /* Padding for alignment */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove browser outline */
+    overflow-y: auto; /* Allow scrolling for long text */
 }
 
 .note-panel[contenteditable="true"] {
     background-color: #4c7c29;
+    font-size: 1.2rem; /* Large font size */
+    font-family: monospace; /* Monospace font for readability */
+    line-height: 1.6; /* Spacing between lines */
+    color: white; /* Text color for visibility */
+    padding: 10px; /* Padding for alignment */
+    outline: none; /* Remove browser outline */
 }
 
 .edit-btn {

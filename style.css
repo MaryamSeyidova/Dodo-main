@@ -341,16 +341,18 @@ a{
 }
 
 .date-time {
-    font-size: 1.2em;
+    font-family: monospace;
+    font-size: 1.5em;
     font-weight: bold;
 }
 
 .save-btn {
+    font-family: monospace;
     background-color: #008000;
     color: white;
     border: none;
-    padding: 8px 12px;
-    font-size: 1em;
+    padding: 8px 15px;
+    font-size: 1.2em;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
@@ -362,8 +364,8 @@ a{
 
 .note-panel {
     width: 90%;
-    max-width: 350px;
-    height: 200px;
+    max-width: 610px;
+    height: 250px;
     background-color: #3a5a20;
     color: white;
     border-radius: 10px;
@@ -374,6 +376,12 @@ a{
 
 .note-panel[contenteditable="true"] {
     background-color: #4c7c29;
+    font-size: 1.5rem; /* Ensure the font size is always large */
+    font-family: monospace; /* Use a monospace font for readability */
+    line-height: 1.6; /* Add consistent spacing between lines */
+    color: white; /* Ensure text is visible */
+    padding: 10px; /* Add padding for better alignment */
+    outline: none; /* Remove the default browser outline while typing */
 }
 
 .edit-btn {
@@ -381,7 +389,7 @@ a{
     color: white;
     border: none;
     padding: 8px 12px;
-    font-size: 1em; 
+    font-size: 1.2em; 
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
@@ -389,7 +397,7 @@ a{
 }
 
 .edit-btn:hover {
-    background-color: rgb(164, 75, 237);
+    background-color: #3f9506;
 }
 
 .task-title, .matcha-break, .study {
@@ -402,7 +410,7 @@ a{
 }
 
 .saved-state {
-    background-color: #004d00 !important;
+    background-color: #109510 !important;
 }
 
 /* Night Mode */
