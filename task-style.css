@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Jersey+20&family=Jersey+25&display=swap');
+
+/* body {
+    font-family: 'Jersey 20', Arial, sans-serif;
+    background-color: #cb5252;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+} */
+
+#app {
+    width: 100%; /* Ensure it spans the full width */
+    height: 667px;
+    background: #609E11;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    padding: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    
+}
+
+.character img {
+    width: 25vw;
+    max-width: 300px; 
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.characters-container {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    gap: 20px; 
+    align-items: center;
+    padding-top: 75px;
+}
+
+#gym, #meds{
+    text-align: center;
+}
+#medsGif{
+    width: 400px; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+#motivationalGif {
+    width: 440px; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+/*This is Casual Gif*/
+ #studyGif{
+    width: 400px;
+    height: auto;
+    padding-left: 175px;
+}
+.characters-container #maryamGif{
+    width: 175px;
+    height: auto;
+}
+
+.characters-container #chaimGif{
+    width: 165px;
+    height: auto;
+    padding-bottom: 30px;
+}
+
+.top-header {
+    font-family: 'Jersey 15', Arial, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.theme-toggle img {
+    width: 35px;
+    cursor: pointer;
+}
+
+.left img, .right img {
+    width: 35px;  /* Adjust the size of arrows */
+    cursor: pointer;
+}
+
+.topic {
+    font-size: 24px; 
+    font-family: 'Jersey 25', sans-serif;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: grid;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.button-container.vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-btn {
+    width: 60%; /* Reduced width */
+    height: 200px; /* Reduced height */
+    padding: 20px; /* Reduced padding */
+    font-size: 1.5em; /* Reduced font size */
+}
+
+.menu-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.3);
+}
+
+.task-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.task-btn {
+    padding: 15px;
+    background: #fff;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.task-btn.study {
+    background: #4A90E2;
+    color: #fff;
+}
+
+.task-btn.break {
+    background: #A5D6A7;
+    color: #333;
+}
+
+.task-btn.medication {
+    background: #FFD54F;
+    color: #333;
+}
+
+.task-btn.gym {
+    background: #FF7043;
+    color: #fff;
+}
+
+.task-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+.hidden {
+    display: none;
+}
+
+.design-process {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Night Mode */
+body.night {
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+body.night #app {
+    background: #333;
+}
+
+body.night .menu-btn, body.night .task-btn {
+    background: #444;
+    color: #fff;
+}
+
+body.night .speech-bubble {
+    background: #888888;
+}
+
+a.task-btn {
+    text-decoration: none;  
+    color: black;           
+}
+
+a.href1 {
+    text-decoration: none;  
+    color: black;           
+}
+
+.data-note-panel {
+    width: 100%; /* Ensure it spans the full width */
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1b2b0d;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box; /* Ensures padding does not shrink width */
+}
+
+
+.date-time-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.date-time {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.save-btn {
+    background-color: #008000;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.save-btn:hover {
+    background-color: #006400;
+}
+
+.note-panel {
+    width: 90%;
+    max-width: 350px;
+    height: 200px;
+    background-color: #3a5a20;
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: left;
+    overflow-y: auto;
+}
+
+.note-panel[contenteditable="true"] {
+    background-color: #4c7c29;
+}
+
+.edit-btn {
+    background-color: #007AFF;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 1em; 
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.edit-btn:hover {
+    background-color: rgb(164, 75, 237);
+}
+
+.task-title {
+    text-align: center;
+}
+
+.matcha-break{
+    text-align: center;
+    align-items: center;
+    font-size: 2.5em; /* Increase font size */
+    font-weight: bold; /* Make it stand out more */
+    margin-bottom: 40px; /* Increase spacing below the header */
+    margin-top: 20px; /* Add spacing above the header */
+}
+
+.study{
+    color: #f71515;
+    text-align: center;
+    align-items: center;
+}
+
+.saved-state {
+    background-color: #004d00 !important; /* Darker green */
+}

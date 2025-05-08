@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Jersey+20&family=Jersey+25&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Jersey 20', Arial, sans-serif;
+    background-color: #609E11;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    overflow-y: auto; /* Enable scrolling */
+}
+
+#app {
+    width: 90%;
+    max-width: 400px;
+    background: #333;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 20px 0; /* Add spacing for scrolling */
+}
+
+.top-header {
+    font-family: 'Jersey 15', Arial, sans-serif;
+    font-size: 1.8em;
+    color: #fff;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topic {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.task-btn {
+    background: #FFCD2D;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.task-btn img {
+    width: 30px;
+    height: auto;
+}
+
+.task-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific task button styles */
+.task-btn.inspiration {
+    background: #FFCD2D; /* Yellow */
+}
+
+.task-btn.research {
+    background: #2196F3; /* Blue */
+}
+
+.task-btn.wireframing {
+    background: #4CAF50; /* Green */
+}
+
+.task-btn.finalizing {
+    background: #FF5722; /* Orange */
+}
+
+.matcha-break {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    margin: 20px 0;
+    text-align: left;
+    line-height: 1.5;
+}
+
+.matcha-break span {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.menu-btn {
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+}
+
+.menu-btn:hover {
+    background: #45a049;
+}
+
+p {
+    color: #fff;
+    font-size: 1em;
+    line-height: 1.6;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #fff;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #4CAF50;
+    font-size: 1em;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.nav-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Apply Jersey 20 font to headers and box text*/
+.top-header h1 {
+    font-family: 'Jersey 20', Arial, sans-serif;
+}
+
+.matcha-break, .matcha-break span, p, .task-btn span {
+    font-family: Arial, sans-serif; /* Default font */
+}
+
+#research {
+    width: 360px; /* Adjust the width to make it smaller */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure proper alignment */
+    margin: 0 auto; /* Center the GIF horizontally */
+}

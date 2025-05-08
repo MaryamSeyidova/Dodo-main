@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodo - Your Task Companion</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="header-container">
+            <img src="" id="dodo-image" alt="Dodo Character">
+        </div>       
+        
+        <section id="categories">
+            <img src="../matcha.svg" alt="Matcha Image" class="matcha-image" id="matcha-image">
+            <div class="button-container vertical">
+                <div class="menu-btn" onclick="showTasks()">Task <br> Scheduler</div>
+                <div class="menu-btn" onclick="showDesignProcess()">Design <br> Process</div>
+            </div>
+        </section>
+
+        <br><br><br><br>
+        
+        <section id="tasks-container" class="hidden">
+            <div class="task-grid">
+                <a href="study.html" class="study-btn">
+                    Study <img src="../assets/Maryam-Casual.gif" id="maryamPng" alt="Study">
+                </a>
+                <a href="break.html" class="break-btn">
+                    Break <img src="../assets/Chaim-Casual.gif" id="chaimGif" alt="Break">
+                </a>
+                <a href="medication.html" class="meds-btn">
+                    Take <br> Medication <br><br>
+                    <img src="../meds.svg" alt="Medication">
+                </a>
+                <a href="gym.html" class="gym-btn">
+                    Gym <img src="../dodo-character/smile.png" id="smilePng" alt="Gym">
+                </a>
+            </div>
+        </section>
+
+        <br><br><br><br><br><br>
+        <!-- Design Process Section -->
+        <section id="design-process" class="hidden">
+            <div class="design-process">
+                <a href="searching-inspirations.html" class="task-btn">
+                    <span><u>Searching</u> <br> For <br> <u>Inspirations</u></span>
+                    <img src="../matcha-scoop.svg" alt="Tree Inspiration">
+                </a>
+                <a href="research.html" class="task-btn">
+                    <span>Research</span>
+                    <img src="../research.svg" id="reasearchSvg" alt="Research Diagram">
+                </a>
+                <a href="wireframing.html" class="task-btn">
+                    <span><u>Wireframing</u> <br>& Prototyping</span>
+                    <img src="../prototyping.svg" alt="Wireframing (Image not visible)">
+                </a>
+                <a href="design-finalizing.html" class="task-btn">
+                    <span>Design Finalizing</span>
+                    <img src="../assets/Maryam-Sing.gif" id="maryamGif" alt="Final Design">
+                </a>
+            </div>
+            <p>You Can Do It <br> Just stay consistent!</p>
+        </section>
+    </div>
+    <script>
+        document.getElementById('header-container').innerHTML = fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+    </script>
+    <script src="../script.js" defer></script>
+</body>
+</html>

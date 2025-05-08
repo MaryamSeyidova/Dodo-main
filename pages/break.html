@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodo - Your Task Companion</title>
+    <link rel="stylesheet" href="../task-style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="header-container"></div>
+        
+        <!-- <div class="task-title">Task Description</div> -->
+        <div class="matcha-break">Matcha Break
+            <div class="characters-container">
+                <div class="character" id="maryam">
+                    <img src="../assets/Maryam-Ball.gif" id="maryamGif" alt="Maryam">
+                </div>
+                <div class="character" id="chaim">
+                    <img src="../assets/Chaim-Ball.gif" id="chaimGif" alt="Chaim">
+                </div>
+            </div>
+        </div>
+        <div class="data-note-panel">
+            <div class="date-time-container">
+                <div class="date-time" id="dateTime"></div>
+                <button class="save-btn" id="saveBtn">Save</button>
+            </div>
+            <div class="note-panel" id="notePanel" contenteditable="false">
+                This is the big note panel for additional details...
+            </div>
+            <button class="edit-btn" id="editBtn">Edit</button>
+        </div>
+    </div>
+    
+    
+    
+    <script>
+        // Load header
+        document.getElementById('header-container').innerHTML = fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+        
+        // Set current date and time
+        window.onload = function () {
+            let now = new Date();
+            document.getElementById('task-date').value = now.toISOString().split('T')[0];
+            document.getElementById('task-time').value = now.toTimeString().split(' ')[0].slice(0, 5);
+        };
+        
+        // Save and load notes
+        const notesField = document.getElementById("task-notes");
+        const saveButton = document.getElementById("save-btn");
+
+        // Load saved notes from localStorage
+        notesField.value = localStorage.getItem("savedNotes") || "";
+
+        saveButton.addEventListener("click", () => {
+            localStorage.setItem("savedNotes", notesField.value);
+        });
+    </script>
+    <script src="../script.js" defer></script>
+</body>
+</html>

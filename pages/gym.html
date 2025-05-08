@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodo - Your Task Companion</title>
+    <link rel="stylesheet" href="../task-style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="header-container"></div>
+        <h1 id="gym">Gym</h1>
+        <div class="matcha-break">
+            <img id="motivationalGif" alt="Motivational Gym GIF" class="task-image">
+        </div>
+        <div class="data-note-panel">
+            <div class="date-time-container">
+                <div class="date-time" id="dateTime"></div>
+                <button class="save-btn" id="saveBtn">Save</button>
+            </div>
+            <div class="note-panel" id="notePanel" contenteditable="false">
+                This is the big note panel for additional details...
+            </div>
+            <button class="edit-btn" id="editBtn">Edit</button>
+        </div>
+    </div>
+    
+    
+    
+    <script>
+        // Load header
+        document.getElementById('header-container').innerHTML = fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+        
+        // GIF URLs
+        const gymGifs = [
+            "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGNtdDE1ZnNsb243MjhvZHZmNTEycDE2cXg3OWt3ajc3azk4YzB6MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oKIPavRPgJYaNI97W/giphy.gif",
+            "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzlvN3lkamU1MGdsenZud3RsNm1nenJzc3hrazh1cG1rZW9vcTZyaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qmtZWoxt5jYvEi9ovV/giphy.gif",
+            "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDFtcGs3YjE5czloejBvNXkzeW9vZXV6NG44M2NrbDBvcWdwdjNybSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0NMQH5TeJnv8ftwLCU/giphy.gif",
+            "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzJ5aTM5b3d1dnp2eTd6Z2dzanF1YmJla3B1YXQwb25qejdrajR0NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YX2x8CrtHdfu4D3r2y/giphy.gif"
+        ];
+
+        // Function to switch the GIF every 3 seconds
+        function switchGif() {
+            const gifElement = document.getElementById("motivationalGif");
+            let currentIndex = 0;
+
+            // Set the initial GIF
+            gifElement.src = gymGifs[currentIndex];
+
+            // Change the GIF every 3 seconds
+            setInterval(() => {
+                currentIndex = (currentIndex + 1) % gymGifs.length; // Loop through the array
+                gifElement.src = gymGifs[currentIndex];
+            }, 3000);
+        }
+
+        // Call the function on page load
+        window.onload = function () {
+            switchGif();
+
+            // Set current date and time
+            let now = new Date();
+            document.getElementById('task-date').value = now.toISOString().split('T')[0];
+            document.getElementById('task-time').value = now.toTimeString().split(' ')[0].slice(0, 5);
+        };
+        
+        // Save and load notes
+        const notesField = document.getElementById("task-notes");
+        const saveButton = document.getElementById("save-btn");
+
+        // Load saved notes from localStorage
+        notesField.value = localStorage.getItem("savedNotes") || "";
+
+        saveButton.addEventListener("click", () => {
+            localStorage.setItem("savedNotes", notesField.value);
+        });
+    </script>
+    <script src="../script.js" defer></script>
+</body>
+</html>

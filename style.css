@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Jersey+20&family=Jersey+25&display=swap');
+
+body {
+    font-family: 'Jersey 20', Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+/*This is Casual Gif*/
+#maryamGif{
+    width: 120px;
+    height: auto;
+}
+
+#chaimGif{
+    width: 155px;
+    height: auto;
+    padding-left: 13vw;
+}
+
+#maryamPng{
+    width: 175px;
+    height: auto;
+    padding-left: 11vw;
+}
+#researchSvg{
+    width: 150px;
+    height: auto; 
+}
+#smilePng{
+    width: 250px;
+    height: auto;
+    padding-left: 50px;
+}
+
+.icon {
+    opacity: 100;
+}
+
+#app {
+    width: 100vw;
+    height: 100vh;
+    background: #6aa329;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    padding: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.top-header {
+    font-family: 'Jersey 15', Arial, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.theme-toggle img, .left img, .right img {
+    width: 35px;
+    cursor: pointer;
+}
+
+.topic {
+    font-size: 24px; 
+    font-family: 'Jersey 25', sans-serif;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+/* Menu 2 options */
+.menu-btn {
+    background: #d3e4c5; 
+    border-radius: 35px;
+    padding: 20px; 
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(213, 205, 205, 0.2);
+    transition: all 0.3s ease;
+    font-family: 'Jersey 25', sans-serif;
+    color: #333; 
+    font-size: 1.5em; 
+    margin: 15px; 
+    width: 75%;
+    height: 150px; 
+    margin-bottom: 20px;
+
+    /* Center text vertically and horizontally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.3);
+    background: #c1d8b0; 
+}
+
+.button-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px; 
+    align-items: center;
+    width: 100%; 
+}
+
+.button-container.vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+    align-items: center;
+    margin-top: 10px; 
+}
+
+.matcha-image {
+    width: 100%;
+    height: auto; 
+    max-height: 300px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    object-fit: contain; 
+}
+
+.task-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.study-btn, .break-btn, .meds-btn, .gym-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45vw;
+    height: 35vh;
+    font-size: 35px; 
+    padding: 15px;
+    border-radius: 55px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.study-btn{
+    color: #fff;
+    background: #4B90E2;
+}
+
+.break-btn {
+    color: #000;
+    background: #A5D6A7;
+}
+
+.meds-btn {
+    color: #000;
+    background: #FFCD2D;
+}
+
+.gym-btn {
+    color: #fff;
+    background: #FF7043;
+}
+
+.meds-btn img {
+    transform: rotate(35deg);
+    width: 250px; 
+    height: auto; 
+    padding-bottom: 105px;
+    padding-left: 15px;
+}
+
+.task-btn {
+    padding: 15px;
+    background: #fff;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.task-btn.study {
+    background: #4A90E2;
+    color: #fff;
+}
+
+.task-btn.break {
+    background: #A5D6A7;
+    color: #333;
+}
+
+.task-btn.medication {
+    background: #FFD54F;
+    color: #333;
+}
+
+.task-btn.gym {
+    background: #FF7043;
+    color: #fff;
+}
+
+.task-btn:hover, .menu-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+.hidden {
+    display: none;
+}
+
+.design-process {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+}
+
+.design-process .task-btn {
+    background: #fff;
+    color: #000;
+    border-radius: 50px;
+    padding: 20px;
+    font-family: 'Jersey 25', sans-serif;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Design hierarchy boxes */
+.design-process .task-btn:nth-child(1) {
+    background: #FFD54F; 
+    font-size: 25px; 
+    height: 100px; 
+    display: flex;
+    flex-direction: column;
+    width: 300px; 
+    height: 50px;
+
+}
+
+.design-process .task-btn:nth-child(2) {
+    background: #4A90E2; 
+    color: #fff; 
+    font-size: 25px; 
+    height: 400px; 
+    width: 250px; 
+    height: 80px;
+}
+
+.design-process .task-btn:nth-child(3) {
+    background: #1f2c1f; 
+    font-size: 25px;
+    height: 500px; 
+    width: 300px; 
+    height: 700px;
+}
+
+.design-process .task-btn:nth-child(4) {
+    background: #FF7043; 
+    color: #fff; 
+    font-size: 25px;
+    width: 250px; 
+    height: 100px;
+}
+
+.design-process .task-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3);
+}
+
+#design-process {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 20px;
+    background-color: #609E11;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    width: 90%;
+    text-align: center;
+}
+
+#design-process h2 {
+    grid-column: span 2; 
+    font-size: 2.5em; 
+    color: #000; 
+    margin-bottom: 20px;
+    font-family: 'Jersey 25', sans-serif;
+}
+
+#design-process p {
+    grid-column: span 2; 
+    font-size: 1.2em;
+    color: #000; 
+    margin-top: 20px;
+    font-family: 'Jersey 20', sans-serif;
+}
+
+.data-note-panel {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1b2b0d;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.date-time-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.date-time {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.save-btn {
+    background-color: #008000;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.save-btn:hover {
+    background-color: #006400;
+}
+
+.note-panel {
+    width: 90%;
+    max-width: 350px;
+    height: 200px;
+    background-color: #3a5a20;
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: left;
+    overflow-y: auto;
+}
+
+.note-panel[contenteditable="true"] {
+    background-color: #4c7c29;
+}
+
+.edit-btn {
+    background-color: #007AFF;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 1em; 
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.edit-btn:hover {
+    background-color: rgb(164, 75, 237);
+}
+
+.task-title, .matcha-break, .study {
+    text-align: center;
+    align-items: center;
+}
+
+.study {
+    color: #f71515;
+}
+
+.saved-state {
+    background-color: #004d00 !important;
+}
+
+/* Night Mode */
+
+body.night .menu-btn {
+    color: #fff; /* Change text color to white in night mode */
+}
+
+.design-process .task-btn:nth-child(1) {
+     color: #333;
+}
+
+.design-process .task-btn:nth-child(3){
+    color: #333;
+}
+
+body.night {
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+body.night #app {
+    background-color: #4c7c29;
+}
+
+body.night .menu-btn, body.night .task-btn {
+    background: #86ab56;
+}
+
+body.night #design-process {
+    background-color: #4c7c29; /* Match background color for night mode */
+}
+
+.design-process .task-btn img {
+    margin-top: 10px;
+    max-width: 80%; 
+}
+
+/* Individual box styles for visual hierarchy */
+.design-process .task-btn:nth-child(1) {
+    background: #FFD54F;
+    font-size: 1.5em;
+    grid-column: span 1; 
+    height: 200px;
+}
+
+.design-process .task-btn:nth-child(2) {
+    background: #4A90E2;
+    color: #fff;
+    font-size: 1.8em;
+    grid-column: span 1; 
+    height: 250px;
+}
+
+.design-process .task-btn:nth-child(3) {
+    background: #A5D6A7;
+    font-size: 1.6em;
+    grid-column: span 1; 
+    height: 220px;
+}
+
+.design-process .task-btn:nth-child(4) {
+    background: #FF7043;
+    color: #fff;
+    font-size: 1.4em;
+    grid-column: span 1; 
+    height: 200px;
+}
+
+

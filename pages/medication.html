@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodo - Your Task Companion</title>
+    <link rel="stylesheet" href="../task-style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="header-container"></div>
+        
+        <!-- <div class="task-title">Task Description</div> -->
+         <h1 id="meds">Meds</h1>
+        <div class="matcha-break">
+            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMW5vdTNzajJqNzl6emdoeHpjZWhja2x2YTR6eTVrZHRxOWI2dHh2byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/bpVmdSIN0gU0HE18TZ/giphy.gif" id="medsGif" alt="Matcha Break Image" class="task-image">
+        </div>
+        <div class="data-note-panel">
+            <div class="date-time-container">
+                <div class="date-time" id="dateTime"></div>
+                <button class="save-btn" id="saveBtn">Save</button>
+            </div>
+            <div class="note-panel" id="notePanel" contenteditable="false">
+                This is the big note panel for additional details...
+            </div>
+            <button class="edit-btn" id="editBtn">Edit</button>
+        </div>
+    </div>
+    
+    
+    
+    <script>
+        // Load header
+        document.getElementById('header-container').innerHTML = fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+        
+        // Set current date and time
+        window.onload = function () {
+            let now = new Date();
+            document.getElementById('task-date').value = now.toISOString().split('T')[0];
+            document.getElementById('task-time').value = now.toTimeString().split(' ')[0].slice(0, 5);
+        };
+        
+        // Save and load notes
+        const notesField = document.getElementById("task-notes");
+        const saveButton = document.getElementById("save-btn");
+
+        // Load saved notes from localStorage
+        notesField.value = localStorage.getItem("savedNotes") || "";
+
+        saveButton.addEventListener("click", () => {
+            localStorage.setItem("savedNotes", notesField.value);
+        });
+    </script>
+    <script src="../script.js" defer></script>
+</body>
+</html>
