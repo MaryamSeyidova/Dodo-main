@@ -332,6 +332,20 @@ a.href1 {
     margin-top: 20px; /* Add spacing above the header */
 }
 
+.matcha-break .characters-container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px; 
+}
+
+.matcha-break #maryamGif,
+.matcha-break #chaimGif {
+    width: 120px; 
+    height: auto; 
+    padding: 0; 
+}
+
 .study{
     color: #f71515;
     text-align: center;

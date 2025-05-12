@@ -392,15 +392,10 @@ a{
     align-items: center;
 }
 
-.matcha-break #maryamGif{
-    width: 100px;
+.matcha-break #maryamGif #chaimGif{
+    width: 5%;
     height: auto;
-    padding-right: 30vw;
-}
-.matcha-break #chaimGif{
-    width: 100px;
-    height: auto;
-    padding-left: 30vw;
+    justify-content: space-between;
 }
 
 .study {
