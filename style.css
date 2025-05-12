@@ -393,6 +393,14 @@ a{
     justify-content: space-between;
 }
 
+#mGif {
+    width: 100px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure proper alignment */
+    margin: 0 auto; /* Center the image horizontally */
+    margin-top: 20px;
+}
+
 .study {
     color: #f71515;
 }
