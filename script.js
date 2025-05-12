@@ -1,10 +1,10 @@
-document.addEventListener("DOMContentLoaded", () => {
-    setGreeting();
-    document.addEventListener("keydown", (event) => {
-        if (event.key === "2") changeToRandomGif();
-    });
-    updateArrowIcons();
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//     setGreeting();
+//     document.addEventListener("keydown", (event) => {
+//         if (event.key === "2") changeToRandomGif();
+//     });
+//     updateArrowIcons();
+// });
 
 // function setGreeting() {
 //     const hour = new Date().getHours();

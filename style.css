@@ -15,32 +15,7 @@ a{
     text-decoration: none;
     color: inherit;
 }
-/*This is Casual Gif*/
-#maryamGif{
-    width: 120px;
-    height: auto;
-}
 
-#chaimGif{
-    width: 155px;
-    height: auto;
-    padding-left: 13vw;
-}
-
-#maryamPng{
-    width: 175px;
-    height: auto;
-    padding-left: 11vw;
-}
-#researchSvg{
-    width: 150px;
-    height: auto; 
-}
-#smilePng{
-    width: 250px;
-    height: auto;
-    padding-left: 50px;
-}
 
 .icon {
     opacity: 100;
@@ -133,25 +108,44 @@ a{
 }
 
 .task-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.study-btn, .break-btn, .meds-btn, .gym-btn {
+.task-grid a{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 45vw;
-    height: 35vh;
+    width: 40%;
+    height: 30vh;
     font-size: 35px; 
-    padding: 15px;
+    padding: 4%;
     border-radius: 55px;
     text-align: center;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
     text-decoration: none;
+    margin-bottom: 14px;
+}
+
+.task-grid img{
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+    padding-top: 5%;
+}
+
+@media screen and (min-width: 1000px) {
+    .task-grid{
+        min-height: 100vh;
+    }
+    .task-grid a{
+        width: 15%;
+    }
 }
 
 .study-btn{
@@ -176,10 +170,8 @@ a{
 
 .meds-btn img {
     transform: rotate(35deg);
-    width: 250px; 
     height: auto; 
-    padding-bottom: 105px;
-    padding-left: 15px;
+    margin-bottom: 50%;
 }
 
 .task-btn {
@@ -221,83 +213,78 @@ a{
     display: none;
 }
 
+/* Design process container */
 .design-process {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between boxes */
+    width: 100%; /* Full width of the container */
+    box-sizing: border-box; /* Include padding in width/height */
+    align-items: center; /* Center items vertically */
+    justify-items: center; /* Center items horizontally */
+}
+
+/* Task button styles */
+.design-process .task-btn {
+    width: 100%;
+    height: 20%; 
+    max-width: 300px; 
+    font-size: calc(1rem + 1vw); 
+    border-radius: 30px; 
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    text-align: center; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+@media screen and (min-width: 1000px) {
+    .design-process {
+        grid-template-columns: repeat(4, 1fr); /* Align items horizontally in 4 columns */
+    }
+}
+
+/* .design-process {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 15px;
     width: 100%;
-}
+} */
 
-.design-process .task-btn {
-    background: #fff;
-    color: #000;
-    border-radius: 50px;
-    padding: 20px;
-    font-family: 'Jersey 25', sans-serif;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-    text-align: center;
-}
-
-
-/* Design hierarchy boxes */
+/* Design process boxes */
 .design-process .task-btn:nth-child(1) {
     background: #FFD54F; 
-    font-size: 25px; 
-    height: 100px; 
-    display: flex;
-    flex-direction: column;
-    width: 300px; 
-    height: 50px;
+    /* width: 250px; 
+    height: 50px; */
 
 }
 
 .design-process .task-btn:nth-child(2) {
     background: #4A90E2; 
     color: #fff; 
-    font-size: 25px; 
-    height: 400px; 
-    width: 250px; 
-    height: 80px;
+    /* width: 250px; 
+    height: 50px; */
 }
 
 .design-process .task-btn:nth-child(3) {
     background: #1f2c1f; 
-    font-size: 25px;
-    height: 500px; 
-    width: 300px; 
-    height: 700px;
+    /* width: 250px; 
+    height: 50px; */
 }
 
 .design-process .task-btn:nth-child(4) {
     background: #FF7043; 
     color: #fff; 
-    font-size: 25px;
-    width: 250px; 
-    height: 100px;
+    /* width: 250px; 
+    height: 50px; */
 }
 
 .design-process .task-btn:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.3);
-}
-
-#design-process {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns */
-    gap: 20px;
-    background-color: #609E11;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    margin: 20px auto;
-    width: 90%;
-    text-align: center;
 }
 
 #design-process h2 {
@@ -376,12 +363,12 @@ a{
 
 .note-panel[contenteditable="true"] {
     background-color: #4c7c29;
-    font-size: 1.5rem; /* Ensure the font size is always large */
-    font-family: monospace; /* Use a monospace font for readability */
-    line-height: 1.6; /* Add consistent spacing between lines */
-    color: white; /* Ensure text is visible */
-    padding: 10px; /* Add padding for better alignment */
-    outline: none; /* Remove the default browser outline while typing */
+    font-size: 1.5rem;
+    font-family: monospace; 
+    line-height: 1.6; 
+    color: white; 
+    padding: 10px;
+    outline: none; 
 }
 
 .edit-btn {
@@ -405,6 +392,17 @@ a{
     align-items: center;
 }
 
+.matcha-break #maryamGif{
+    width: 100px;
+    height: auto;
+    padding-right: 30vw;
+}
+.matcha-break #chaimGif{
+    width: 100px;
+    height: auto;
+    padding-left: 30vw;
+}
+
 .study {
     color: #f71515;
 }
@@ -416,7 +414,7 @@ a{
 /* Night Mode */
 
 body.night .menu-btn {
-    color: #fff; /* Change text color to white in night mode */
+    color: #fff;
 }
 
 .design-process .task-btn:nth-child(1) {
@@ -441,7 +439,7 @@ body.night .menu-btn, body.night .task-btn {
 }
 
 body.night #design-process {
-    background-color: #4c7c29; /* Match background color for night mode */
+    background-color: #4c7c29; 
 }
 
 .design-process .task-btn img {
@@ -454,7 +452,7 @@ body.night #design-process {
     background: #FFD54F;
     font-size: 1.5em;
     grid-column: span 1; 
-    height: 200px;
+    height: 210px;
 }
 
 .design-process .task-btn:nth-child(2) {
@@ -462,14 +460,14 @@ body.night #design-process {
     color: #fff;
     font-size: 1.8em;
     grid-column: span 1; 
-    height: 250px;
+    height: 210px;
 }
 
 .design-process .task-btn:nth-child(3) {
     background: #A5D6A7;
     font-size: 1.6em;
     grid-column: span 1; 
-    height: 220px;
+    height: 210px;
 }
 
 .design-process .task-btn:nth-child(4) {
@@ -477,7 +475,21 @@ body.night #design-process {
     color: #fff;
     font-size: 1.4em;
     grid-column: span 1; 
-    height: 200px;
+    height: 210px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .design-process .task-btn {
+        width: 90%; /* Reduce the width for smaller screens */
+        height: auto; /* Allow height to adjust dynamically */
+        font-size: 1rem; /* Reduce font size for better readability */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .design-process {
+        gap: 10px; /* Reduce the gap between boxes */
+    }
 }
 
 
