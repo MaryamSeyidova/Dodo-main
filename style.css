@@ -30,7 +30,7 @@ a{
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     box-sizing: border-box;
 }
 
@@ -215,44 +215,39 @@ a{
 
 /* Design process container */
 .design-process {
-    display: grid; /* Use CSS Grid for layout */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
-    gap: 20px; /* Space between boxes */
-    width: 100%; /* Full width of the container */
-    box-sizing: border-box; /* Include padding in width/height */
-    align-items: center; /* Center items vertically */
-    justify-items: center; /* Center items horizontally */
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; 
+    width: 100%; 
+    padding: 10px; 
+    box-sizing: border-box; 
+    justify-items: center; 
+    object-fit: contain; 
 }
 
 /* Task button styles */
 .design-process .task-btn {
-    width: 100%;
-    height: 20%; 
-    max-width: 300px; 
-    font-size: calc(1rem + 1vw); 
-    border-radius: 30px; 
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+    width: 100%; 
+    height: 150px; 
+    max-width: 200px;
+    font-size: 1rem;
+    border-radius: 15px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column; 
     align-items: center; 
-    justify-content: center;
+    justify-content: center; 
     text-align: center; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: contain; 
 }
 
 
 @media screen and (min-width: 1000px) {
     .design-process {
-        grid-template-columns: repeat(4, 1fr); /* Align items horizontally in 4 columns */
+        grid-template-columns: repeat(4, 1fr); 
     }
 }
-
-/* .design-process {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-    width: 100%;
-} */
 
 /* Design process boxes */
 .design-process .task-btn:nth-child(1) {
@@ -475,16 +470,22 @@ body.night #design-process {
 
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
-    .design-process .task-btn {
-        width: 90%; /* Reduce the width for smaller screens */
-        height: auto; /* Allow height to adjust dynamically */
-        font-size: 1rem; /* Reduce font size for better readability */
-        padding: 10px; /* Adjust padding for smaller screens */
+    .design-process {
+        grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
     }
 
-    .design-process {
-        gap: 10px; /* Reduce the gap between boxes */
+    .design-process .task-btn {
+        width: 90%; /* Adjust width for smaller screens */
+        height: auto; /* Allow height to adjust dynamically */
+        font-size: 0.9rem; /* Reduce font size for smaller screens */
     }
+}
+
+#design-process {
+    height: 100%; /* Take full height of the container */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px; /* Add padding for spacing */
+    box-sizing: border-box; /* Include padding in height calculations */
 }
 
 
