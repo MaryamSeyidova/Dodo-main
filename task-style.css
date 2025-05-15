@@ -257,9 +257,10 @@ a.href1 {
 .date-time-container {
     display: flex;
     justify-content: space-between;
-    width: 90%;
     align-items: center;
+    width: 90%;
     margin-bottom: 10px;
+    gap: 10px;
 }
 
 .date-time {
@@ -357,6 +358,24 @@ a.href1 {
     background-color: #004d00 !important; /* Darker green */
 }
 
+.karaoke-link {
+    display: inline-block;
+    background: #4B90E2;
+    color: #fff !important;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 14px 32px;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.2s;
+    box-shadow: 0 2px 8px rgba(75,144,226,0.15);
+}
+
+.karaoke-link:hover {
+    background: #3570b5;
+}
+
 /* Add media queries for small phones and specific screen sizes */
 
 /* General small phone adjustments */
@@ -421,5 +440,13 @@ a.href1 {
     .matcha-break {
         font-size: 2em;
         margin-bottom: 20px;
+    }
+
+    .karaoke-link {
+        font-size: 1.1em;
+        padding: 10px 18px;
+    }
+    .date-time-container {
+        gap: 6px;
     }
 }
